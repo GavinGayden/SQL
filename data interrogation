@@ -1,0 +1,4 @@
+/*Purpose: understand DB schema*/
+SELECT *
+FROM unpopular_songs
+LIMIT 5;
