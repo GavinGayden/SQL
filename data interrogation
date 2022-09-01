@@ -15,3 +15,15 @@ FROM unpopular_songs;
 SELECT COUNT(1), mode
 	FROM unpopular_songs 
 GROUP BY mode;
+
+/* I wanted to see the number of times each artist appeared in the unpopular_songs table. The top 5 least popular artists are:
+Alei Islah
+Ocean Sounds
+Blackjesus Yoshua
+Sounds Of Nature : Thunderstorm, Rain
+Paris Street*/
+
+SELECT COUNT(1) AS Tracks_contributed, track_artist 
+	FROM unpopular_songs
+GROUP BY track_artist
+ORDER BY Tracks_contributed DESC;
