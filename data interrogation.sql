@@ -52,3 +52,13 @@ SELECT tempo,
 FROM unpopular_songs 
 ORDER BY Pace DESC
 ;
+
+/*The characteristic of 'liveness' is from 0 to 1. 91% of the unpopular songs fell below .5 (LESS LIVE) */
+
+SELECT liveness,
+	CASE 
+		 WHEN liveness <= '.5' THEN 'LESS LIVE'
+		 WHEN liveness > '.5' THEN 'MORE LIVE'
+		 ELSE NULL
+	END AS Liveness_scale
+FROM unpopular_songs ;
